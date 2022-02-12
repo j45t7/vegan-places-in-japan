@@ -1,1 +1,1 @@
-# vegan-restaurants
+# vegan-places-japan
