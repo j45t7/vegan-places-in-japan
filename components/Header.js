@@ -5,10 +5,15 @@ import { useRouter } from 'next/router'
 const Header = () => {
   const router = useRouter()
   const addNewPlace = router.pathname === '/add-new-place' ? false : true
-
+  const handleClick = () => {
+    router.push('/')
+  }
   return (
     <header className='py-5 h-28 bg-white items-center container mx-auto grid grid-cols-2 content-around'>
-      <h1 className='text-base lg:text-5xl text-green-600 pl-3 font-bold uppercase font-name'>
+      <h1
+        onClick={handleClick}
+        className='text-base lg:text-5xl text-green-600 pl-3 font-bold uppercase font-name cursor-pointer'
+      >
         <span role='img' aria-label='salad' className='pr-2'>
           🥗
         </span>
