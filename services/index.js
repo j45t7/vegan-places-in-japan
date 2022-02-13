@@ -7,7 +7,6 @@ export const getPlaces = async () => {
     query MyQuery {
       places(where: { acceptedPlace: true }) {
         address
-        city
         id
         name
         location {
@@ -18,6 +17,11 @@ export const getPlaces = async () => {
           url
         }
         mealType {
+          id
+          name
+        }
+        city {
+          id
           name
         }
         googleUrl
@@ -40,6 +44,19 @@ export const getMealTypes = async () => {
 
   const result = await request(graphqlAPI, query)
   return result.mealTypes
+}
+export const getCities = async () => {
+  const query = gql`
+    query MyQuery {
+      cities {
+        id
+        name
+      }
+    }
+  `
+
+  const result = await request(graphqlAPI, query)
+  return result.cities
 }
 
 export const submitPlace = async (obj) => {

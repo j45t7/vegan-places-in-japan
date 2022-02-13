@@ -22,17 +22,19 @@ export default async function addNewPlaces(req, res) {
     mutation CreatePlace(
       $name: String!
       $address: String!
-      $city: String!
+      $city: ID!
       $googleUrl: String!
       $photoUrl: String!
+      $mealType: ID!
     ) {
       createPlace(
         data: {
           name: $name
           address: $address
-          city: $city
+          city: { connect: { id: $city } }
           googleUrl: $googleUrl
           photoUrl: $photoUrl
+          mealType: { connect: { id: $mealType } }
         }
       ) {
         id

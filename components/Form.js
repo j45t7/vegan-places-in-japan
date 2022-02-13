@@ -4,16 +4,18 @@ import SelectInput from './SelectInput'
 import { submitPlace } from '../services/index'
 import { useRouter } from 'next/router'
 import { getMealTypes } from '../services/index'
+import { getCities } from '../services/index'
 
 const Form = () => {
   const [mealTypes, setMealTypes] = useState([])
-
+  const [cities, setCities] = useState([])
   useEffect(() => {
-    getMealTypes().then((newMealTypes) => setMealTypes(newMealTypes))
+    getMealTypes().then((mealType) => setMealTypes(mealType))
+  }, [])
+  useEffect(() => {
+    getCities().then((city) => setCities(city))
   }, [])
 
-  const options = mealTypes.map((mealType) => mealType.name)
-  console.log(options)
   const router = useRouter()
   const [showSuccessMessage, setShowSuccessMessage] = useState(false)
   const [error, setError] = useState(false)
@@ -23,6 +25,7 @@ const Form = () => {
   const cityElement = useRef()
   const googleUrlElement = useRef()
   const photoUrlElement = useRef()
+  const mealTypeElement = useRef()
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -33,8 +36,9 @@ const Form = () => {
     const { value: city } = cityElement.current
     const { value: googleUrl } = googleUrlElement.current
     const { value: photoUrl } = photoUrlElement.current
+    const { value: mealType } = mealTypeElement.current
 
-    if (!name || !address || !city || !googleUrl || !photoUrl) {
+    if (!name || !address || !city || !googleUrl || !photoUrl || !mealType) {
       setError(true)
       return
     }
@@ -45,6 +49,7 @@ const Form = () => {
       city,
       googleUrl,
       photoUrl,
+      mealType,
     }
 
     submitPlace(placeObj).then((res) => {
@@ -57,7 +62,7 @@ const Form = () => {
     })
   }
   return (
-    <div className='block p-6 max-w-screen-lg h-full'>
+    <div className='block p-6 h-full'>
       <form onSubmit={handleSubmit}>
         <FormInput
           name='name'
@@ -75,10 +80,17 @@ const Form = () => {
         <SelectInput
           name='selectType'
           label='Select Meal Type'
-          options={options}
+          refer={mealTypeElement}
+          aria='meal type'
+          options={mealTypes}
         />
-        {/* select for the city */}
-        <FormInput name='city' refer={cityElement} label='City' aria='city' />
+        <SelectInput
+          name='city'
+          refer={cityElement}
+          label='City'
+          aria='city'
+          options={cities}
+        />
         <FormInput
           name='googleUrl'
           refer={googleUrlElement}
@@ -92,14 +104,6 @@ const Form = () => {
           aria='image'
           helperText='The best representation of the place!'
         />
-        {/* <FormInput
-          name='feedback'
-          refer={feedbackElement}
-          label='Image link'
-          aria='image'
-          helperText='The best representation of the place!'
-        /> */}
-
         {error && (
           <p className='text-base text-red-500'>All fields are required</p>
         )}

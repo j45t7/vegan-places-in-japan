@@ -5,14 +5,13 @@ import { getPlaces } from '../services/index'
 
 export default function Home({ places }) {
   const [filteredCities, setFilteredCities] = useState(places)
-  const allCities = ['all', ...new Set(places.map((place) => place.city))]
-
+  const allCities = ['all', ...new Set(places.map((place) => place.city.name))]
   const filterCities = (city) => {
     if (city === 'all') {
       setFilteredCities(places)
       return
     }
-    const newCity = places.filter((place) => place.city === city)
+    const newCity = places.filter((place) => place.city.name === city)
     setFilteredCities(newCity)
   }
 
