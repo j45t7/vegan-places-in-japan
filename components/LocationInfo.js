@@ -4,7 +4,6 @@ import { InfoWindow } from '@react-google-maps/api'
 import Image from 'next/image'
 
 const LocationInfo = ({ position, onCloseClick, info }) => {
-  console.log(info)
   return (
     <InfoWindow
       className='auto'
