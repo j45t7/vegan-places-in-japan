@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <header className='py-5 h-28 bg-white items-center container mx-auto grid grid-cols-2 content-around'>
-      <h1 className='text-lg lg:text-5xl text-green-600 pl-3 font-bold uppercase font-name'>
+      <h1 className='text-base lg:text-5xl text-green-600 pl-3 font-bold uppercase font-name'>
         <span role='img' aria-label='salad' className='pr-2'>
           🥗
         </span>
