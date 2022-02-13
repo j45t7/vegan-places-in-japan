@@ -29,8 +29,8 @@ const FormInput = ({ label, aria, helperText = '', refer, name, options }) => {
         aria-describedby={aria}
       >
         {options.map((option) => (
-          <option key={option} value={option}>
-            {option}
+          <option key={option.id} value={option.id}>
+            {option.name}
           </option>
         ))}
       </select>

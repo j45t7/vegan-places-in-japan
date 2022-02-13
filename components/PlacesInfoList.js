@@ -1,11 +1,6 @@
 import React from 'react'
 
 const PlacesInfoList = ({ places }) => {
-  console.log(places)
-
-  // const vegan = place.mealType.name === 'Vegan' && 'bg-green-700'
-  // const vegetarian = place.mealType.name === 'Vegan' && 'bg-orange-700'
-  // const vegOpts = 'bg-purple-700'
   const list = places.map((place) => (
     <div className='card hover:shadow-lg' key={place.id}>
       <a href={place.googleUrl} target='_blank' rel='noreferrer'>
