@@ -1,15 +1,12 @@
 import React from 'react'
 
-const FormInput = ({ label, aria, helperText = '', refer, name }) => {
+const FormInput = ({ label, aria, helperText = '', refer, name, options }) => {
   return (
     <div className='mb-6'>
-      <label
-        htmlFor='placeName'
-        className=' inline-block mb-2 text-green-700 text-lg'
-      >
+      <label className=' inline-block mb-2 text-green-700 text-lg'>
         {label}
       </label>
-      <input
+      <select
         type='text'
         ref={refer}
         name={name}
@@ -30,8 +27,14 @@ const FormInput = ({ label, aria, helperText = '', refer, name }) => {
           focus:text-gray-700 focus:bg-white focus:border-peach
           focus:outline-none'
         aria-describedby={aria}
-      />
-      <small className='block mt-1 text-sm text-gray-600'>{helperText}</small>
+      >
+        {options.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
+      {/* <small className='block mt-1 text-sm text-gray-600'>{helperText}</small> */}
     </div>
   )
 }
