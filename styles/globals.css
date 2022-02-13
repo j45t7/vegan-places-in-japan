@@ -54,6 +54,10 @@ a {
   @apply bg-white rounded overflow-hidden shadow relative cursor-pointer;
 }
 
+.badge {
+  @apply text-white text-xs uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2;
+}
+
 .heart {
   margin-bottom: -3px !important;
 }
