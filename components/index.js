@@ -1,0 +1,8 @@
+export { default as Header } from './Header'
+export { default as Map } from './Map/Map'
+export { default as FilterCities } from './FilterCities'
+export { default as Footer } from './Footer'
+export { default as PlacesInfoList } from './PlacesInfoList'
+export { default as Layout } from './Layout'
+export { default as Form } from './Form'
+export { default as FormInput } from './FormInput'
