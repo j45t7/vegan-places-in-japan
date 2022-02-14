@@ -34,7 +34,6 @@ const FormInput = ({ label, aria, helperText = '', refer, name, options }) => {
           </option>
         ))}
       </select>
-      {/* <small className='block mt-1 text-sm text-gray-600'>{helperText}</small> */}
     </div>
   )
 }

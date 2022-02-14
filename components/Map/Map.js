@@ -16,7 +16,7 @@ const Map = ({ places, center, zoom, mapContainerStyle, options }) => {
   }
   if (loadError) return 'Error loading map'
   if (!isLoaded) return 'Loading map'
-  const BASE_URL = 'https://www.svgrepo.com/show/34525/'
+  const BASE_ICON_URL = 'https://www.svgrepo.com/show/235518/'
   const markers = places.map((marker) => (
     <LocationMarker
       key={marker.id}
@@ -26,7 +26,7 @@ const Map = ({ places, center, zoom, mapContainerStyle, options }) => {
         lng: marker.location.longitude,
       }}
       icon={{
-        url: BASE_URL + 'leaf.svg',
+        url: BASE_ICON_URL + 'leaf.svg',
         origin: new window.google.maps.Point(0, 0),
         anchor: new window.google.maps.Point(15, 15),
         scaledSize: new window.google.maps.Size(30, 30),
