@@ -1,5 +1,5 @@
 {
-  "name": "vegan-places-japan",
+  "name": "vegan-places-in-japan",
   "private": true,
   "scripts": {
     "dev": "next dev",
