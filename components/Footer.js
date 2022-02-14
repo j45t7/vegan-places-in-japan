@@ -1,19 +1,12 @@
 import React from 'react'
-import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <footer className='h-36 bg-peach relative bottom-0 w-full'>
-      <h1 className='text-white p-5 text-center'>
-        Made with{' '}
-        <Image
-          width='20'
-          height='20'
-          src='/pixel-heart.png'
-          alt='pixel-heart'
-          className='heart'
-        />{' '}
-        by{' '}
+    <footer className='h-36 bg-peach relative bottom-0 w-full text-white p-5 text-center'>
+      <p>All your comments and suggestions are welcome!</p>
+      <a href='mailto:veganplacesinjapan@gmail.com'>Vegan Places in Japan 💌</a>
+      <h1 className='py-6'>
+        Made with ❤️ by{' '}
         <a
           className='cursor-pointer'
           target='_blank'
