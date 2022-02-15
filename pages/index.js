@@ -25,9 +25,7 @@ export default function Home({ places }) {
       <Layout>
         <FilterCities cities={allCities} filterCities={filterCities} />
         <PlacesInfoList places={filteredCities} />
-        <div className='container mx-auto px-2 pb-12'>
-          <Map places={places} />
-        </div>
+        <Map places={places} />
       </Layout>
     </div>
   )

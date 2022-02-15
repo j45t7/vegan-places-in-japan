@@ -65,7 +65,7 @@ Map.defaultProps = {
     lng: 135.526,
   },
   mapContainerStyle: {
-    height: '50vh',
+    height: '70vh',
     width: '100%',
   },
   options: {
