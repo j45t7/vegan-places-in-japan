@@ -70,7 +70,6 @@ Map.defaultProps = {
   },
   options: {
     styles: mapStyles,
-    disableDefaultUI: true,
   },
   zoom: 14,
 }
