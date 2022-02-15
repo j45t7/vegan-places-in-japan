@@ -33,7 +33,7 @@ const Header = () => {
               lg:text-lg
               hover:shadow-inner
               transform
-              hover:scale-125
+              hover:scale-110
               transition
               ease-out
               duration-300'
