@@ -2,10 +2,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='h-36 bg-peach relative bottom-0 w-full text-white p-5 text-center'>
-      <p>All your comments and suggestions are welcome!</p>
+    <footer className='h-52 bg-peach w-full text-white py-8 text-center'>
+      <p className='pb-4'>All your comments and suggestions are welcome!</p>
       <a href='mailto:veganplacesinjapan@gmail.com'>Vegan Places in Japan 💌</a>
-      <h1 className='py-6'>
+      <h1 className='py-10'>
         Made with ❤️ by{' '}
         <a
           className='cursor-pointer'
