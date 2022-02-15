@@ -27,11 +27,12 @@ a {
 }
 
 .gm-style .gm-style-iw-d {
-  overflow: auto !important;
+  overflow: hidden !important;
 }
 
 .gm-ui-hover-effect {
   width: 36px !important;
+  right: -3px !important;
 }
 
 .gm-ui-hover-effect > img {

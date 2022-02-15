@@ -11,6 +11,9 @@ module.exports = {
       fontFamily: {
         name: ['Shizuru'],
       },
+      fontSize: {
+        small: '10px',
+      },
     },
   },
   plugins: [],
