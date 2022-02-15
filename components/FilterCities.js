@@ -45,7 +45,7 @@ const FilterCities = ({ cities, filterCities }) => {
               text-peach
               border-peach
               md:border-2
-              hover:bg-peach hover:text-white
+              hover:bg-peach hover:text-white focus:bg-peach focus:text-white
               transition
               ease-out
               duration-500
