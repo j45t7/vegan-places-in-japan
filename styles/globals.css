@@ -52,7 +52,7 @@ a {
 }
 
 .card {
-  @apply bg-white rounded overflow-hidden shadow relative cursor-pointer;
+  @apply bg-white rounded overflow-hidden shadow relative;
 }
 
 .badge {
@@ -61,4 +61,27 @@ a {
 
 .heart {
   margin-bottom: -3px !important;
+}
+
+.btn-text {
+  @apply text-white text-base hover:bg-white;
+}
+
+.btn-green {
+  @apply bg-green-700 border-green-700 hover:text-green-700;
+}
+.btn-peach-filled {
+  @apply bg-peach border-peach hover:text-peach;
+}
+
+.btn-peach-border {
+  @apply text-xs text-peach border-peach hover:bg-peach hover:text-white focus:bg-peach focus:text-white md:border-2;
+}
+
+.btn-animation {
+  @apply transition ease-out duration-500 m-3;
+}
+
+.input {
+  @apply w-full px-3 py-3 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-peach focus:outline-none;
 }
