@@ -67,15 +67,17 @@ const Form = () => {
         <FormInput
           name='name'
           refer={nameElement}
-          label='Location name'
+          label='Location Name'
           aria='location'
+          icon='🍏'
         />
         <FormInput
           name='address'
           refer={addressElement}
-          label='Location address'
+          label='Location Address '
           aria='address'
           helperText='Tell us the full address of the location.'
+          icon='📍'
         />
         <SelectInput
           name='selectType'
@@ -83,6 +85,7 @@ const Form = () => {
           refer={mealTypeElement}
           aria='meal type'
           options={mealTypes}
+          icon='🍽'
         />
         <SelectInput
           name='city'
@@ -90,19 +93,22 @@ const Form = () => {
           label='City'
           aria='city'
           options={cities}
+          icon='🏢'
         />
         <FormInput
           name='googleUrl'
           refer={googleUrlElement}
-          label='Google map link'
+          label='Google Map Link'
           aria='google map link'
+          icon='🗾'
         />
         <FormInput
           name='photoUrl'
           refer={photoUrlElement}
-          label='Image link'
+          label='Image Link'
           aria='image'
           helperText='The best representation of the place!'
+          icon='📸'
         />
         {error && (
           <p className='text-base text-red-500'>All fields are required</p>
@@ -112,16 +118,10 @@ const Form = () => {
             type='submit'
             className='
             btn
-            text-base
-            bg-peach
-            text-white
+            btn-text
+            btn-animation
             border-2
-            border-peach
-            hover:bg-white
-            hover:text-peach
-            transition
-            ease-out
-            duration-500
+            btn-peach-filled
             '
           >
             Submit

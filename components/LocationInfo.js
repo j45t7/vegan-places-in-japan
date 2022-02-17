@@ -10,14 +10,16 @@ const LocationInfo = ({ position, onCloseClick, info }) => {
       onCloseClick={onCloseClick}
     >
       <div className='w-52 md:w-56 h-54'>
-        <Image
-          src={info.photo.url}
-          unoptimized
-          alt={info.name}
-          width='260px'
-          height='125px'
-          className='object-cover'
-        />
+        <a href={info.googleUrl} target='_blank' rel='noreferrer'>
+          <Image
+            src={info.photo.url}
+            unoptimized
+            alt={info.name}
+            width='260px'
+            height='125px'
+            className='object-cover'
+          />
+        </a>
         <ul className='p-2'>
           <li className='text-small md:text-sm font-bold uppercase'>
             {info.name}
