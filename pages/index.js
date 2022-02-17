@@ -1,11 +1,24 @@
 import Head from 'next/head'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Map, PlacesInfoList, FilterCities, Layout } from '../components'
 import { getPlaces } from '../services/index'
 
+const INITIAL_NUMBER_OF_LOADED_PLACES = 3
+
 export default function Home({ places }) {
   const [filteredCities, setFilteredCities] = useState(places)
+  const [loadedLocations, setLoadedLocations] = useState(
+    INITIAL_NUMBER_OF_LOADED_PLACES
+  )
+
+  const loadMoreLocations = () => {
+    setLoadedLocations(
+      (prevValue) => prevValue + INITIAL_NUMBER_OF_LOADED_PLACES
+    )
+  }
+
   const allCities = ['all', ...new Set(places.map((place) => place.city.name))]
+
   const filterCities = (city) => {
     if (city === 'all') {
       setFilteredCities(places)
@@ -13,6 +26,7 @@ export default function Home({ places }) {
     }
     const newCity = places.filter((place) => place.city.name === city)
     setFilteredCities(newCity)
+    setLoadedLocations(INITIAL_NUMBER_OF_LOADED_PLACES)
   }
 
   return (
@@ -24,7 +38,11 @@ export default function Home({ places }) {
       </Head>
       <Layout>
         <FilterCities cities={allCities} filterCities={filterCities} />
-        <PlacesInfoList places={filteredCities} />
+        <PlacesInfoList
+          places={filteredCities}
+          loadedLocations={loadedLocations}
+          loadMoreLocations={loadMoreLocations}
+        />
         <Map places={places} />
       </Layout>
     </div>
