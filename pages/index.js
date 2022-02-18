@@ -37,12 +37,12 @@ export default function Home({ places }) {
           name='description'
           content='Find the vegan options around Japan!'
         />
-        <meta property='og:title' content='Vegan Places in Japan' />
-        <meta property='og:description' content='Vegan options around Japan!' />
         <meta
           name='keywords'
           content='vegan restaurants, vegetarian restaurants, healthy, health food stores, vegan, vegan-friendly, dining, options, guide, vegetarian, restaurant directory, organic, raw food, vegetarian food, foods, cookbooks, vegetarianism, veganism, travel, recipes, nutrition, vegan places'
         />
+        <meta property='og:title' content='Vegan Places in Japan' />
+        <meta property='og:description' content='Vegan options around Japan!' />
         <meta
           property='og:url'
           content='https://veganplacesinjapan.vercel.app/'
