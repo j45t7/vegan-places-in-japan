@@ -12,7 +12,7 @@ const Header = () => {
     <header className='py-5 h-28 bg-white items-center container mx-auto grid grid-cols-2 content-around'>
       <h1
         onClick={handleClick}
-        className='text-base lg:text-5xl text-green-600 pl-3 font-bold uppercase font-name cursor-pointer'
+        className='text-lg lg:text-5xl text-green-600 pl-3 font-bold uppercase font-name cursor-pointer whitespace-nowrap'
       >
         <span role='img' aria-label='salad' className='pr-2'>
           🥗
@@ -21,25 +21,8 @@ const Header = () => {
       </h1>
       <div className='text-right p-5'>
         {addNewPlace && (
-          <Link href='/add-new-place'>
-            <button
-              className='
-              max-w-48
-              lg:px-5
-              btn
-              bg-peach
-              text-white
-              text-xs
-              lg:text-lg
-              hover:shadow-inner
-              transform
-              hover:scale-110
-              transition
-              ease-out
-              duration-300'
-            >
-              Add New Place
-            </button>
+          <Link href='/add-new-place' passHref>
+            <button className='btn btn-header'>Add New Place</button>
           </Link>
         )}
       </div>

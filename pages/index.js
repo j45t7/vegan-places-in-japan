@@ -42,7 +42,10 @@ export default function Home({ places }) {
           content='vegan restaurants, vegetarian restaurants, healthy, health food stores, vegan, vegan-friendly, dining, options, guide, vegetarian, restaurant directory, organic, raw food, vegetarian food, foods, cookbooks, vegetarianism, veganism, travel, recipes, nutrition, vegan places'
         />
         <meta property='og:title' content='Vegan Places in Japan' />
-        <meta property='og:description' content='Vegan options around Japan!' />
+        <meta
+          property='og:description'
+          content='There are not many vegan or vegetarian food restaurants in Japan. Vegan Places in Japan is a guide to vegan options around Japan! Share you favorites spots!'
+        />
         <meta
           property='og:url'
           content='https://veganplacesinjapan.vercel.app/'

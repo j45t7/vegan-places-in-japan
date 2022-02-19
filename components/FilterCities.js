@@ -1,9 +1,8 @@
+import Title from './Title'
 const FilterCities = ({ cities, filterCities }) => {
   return (
     <div className='container mx-auto'>
-      <h1 className='text-2xl md:text-3xl font-bold p-5 uppercase'>
-        🏢 Search by Cities
-      </h1>
+      <Title title=' Search by Cities' icon='🏢' aria='building' />
       <div className='block md:hidden px-4 pb-6 '>
         <select
           className='input uppercase'
