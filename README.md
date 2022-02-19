@@ -1,14 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 # Vegan Places in Japan
 
 🥗 It is a guide around vegan restaurants around 🇯🇵
 
-🍽 Allowes to add new locations.
+🍽 Allows to add new locations.
 
 ## How does it look like?
 
-![screenshot](./video.gif)
+![screenshot](./public/video.gif)
 
 ## How to use
 
