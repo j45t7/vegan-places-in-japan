@@ -10,7 +10,7 @@
 
 ## How to use
 
-Go to [this page](https://veganplacesinjapan.vercel.app/) and start playing!
+Go to [this page](https://veganplacesinjapan.vercel.app/)!
 
 ## Tech Stack
 
